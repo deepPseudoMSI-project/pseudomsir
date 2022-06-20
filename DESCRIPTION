@@ -1,0 +1,44 @@
+Package: pseudomsir
+Type: Package
+Title: R package for deepPseudoMSI project
+Version: 0.99.1
+Date: 2022-06-20
+Authors@R: c(
+    person("Xiaotao", "Shen", , "shenxt1990@outlook.com", role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0002-9608-9964")
+    )
+    )
+Description: R package for deepPseudoMSI project.
+LazyData: true
+Depends: R (>= 4.1)
+Imports:
+    cli,
+    crayon,
+    clisymbols,
+    dplyr,
+    ProtGenerics,
+    MSnbase,
+    mzR,
+    magrittr,
+    purrr,
+    utils,
+    stats,
+    rstudioapi,
+    BiocGenerics,
+    BiocParallel,
+    stringr,
+    grDevices
+License: MIT + file LICENSE
+URL: https://github.com/deepPseudoMSI-project/pseudomsir
+RoxygenNote: 7.1.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Note:
+biocViews: Metabolomics, MassSpectrometry, MSI
+Encoding: UTF-8
+Config/testthat/edition: 3

@@ -119,13 +119,19 @@ convert_raw_data2pseudoms_image <-
       
       colnames(x)[c(1, 2)] <- c("mz", "intensity")
       
-      x <-
-        x %>%
-        dplyr::group_by(cell) %>%
-        dplyr::mutate(intensity = sum(intensity)) %>%
-        dplyr::ungroup() %>%
-        dplyr::select(cell, intensity) %>%
-        dplyr::distinct(cell, .keep_all = TRUE)
+      # x <-
+      #   x %>%
+      #   dplyr::group_by(cell) %>%
+      #   dplyr::mutate(intensity = sum(intensity)) %>%
+      #   dplyr::ungroup() %>%
+      #   dplyr::select(cell, intensity) %>%
+      #   dplyr::distinct(cell, .keep_all = TRUE)
+      
+      x <- dplyr::group_by(x, cell)
+      x <- dplyr::mutate(x, intensity = sum(intensity))
+      x <- dplyr::ungroup(x)
+      x <- dplyr::select(x, cell, intensity)
+      x <- dplyr::distinct(x, cell, .keep_all = TRUE)
       
       all_cell <-
         data.frame(cell = seq_len(mz_pixel),
@@ -143,7 +149,7 @@ convert_raw_data2pseudoms_image <-
     # system.time(
     peaks <-
       BiocParallel::bplapply(
-        X = 1:length(peaks),
+        X = seq_len(length(peaks)),
         FUN = temp_fun1,
         BPPARAM = BiocParallel::SnowParam(workers = threads,
                                           progressbar = TRUE),

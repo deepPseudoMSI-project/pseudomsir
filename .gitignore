@@ -45,3 +45,7 @@ test_data
 example
 Result
 demo_data
+docs
+
+vignettes/demo_data
+vignettes/demo_data/

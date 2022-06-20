@@ -1,0 +1,75 @@
+url: https://pseudomsir.deeppseudomsi.org
+
+home:
+  strip_header: false
+  title: pseudomsir
+  links:
+  - text: Find me
+    href: https://www.shenxt.info/
+
+authors:
+  Xiaotao Shen:
+    href: https://www.shenxt.info/
+
+development:
+  mode: auto
+  version_label: danger
+  version_tooltip: "Under development"
+
+template:
+  params:
+    docsearch:
+      api_key: 2f09495997a50f5008bc92fa73c5552d
+      index_name: pseudomsir
+    bootstrap: 5
+    bootswatch: journal
+    ganalytics: UA-000000-01
+    
+navbar:
+  title: "sparklyr"
+  type: inverse
+  structure:
+    left: [home, intro, news, reference]
+    right: [github, twitter]
+  components:
+    articles:
+      text: Help document
+      menu:
+      - text: Install pseudomsir
+        href: articles/pseudomsir_install.html
+      - text: PCA analysis shows the data quality
+        href: articles/pseudomsir_pca.html
+      - text: RSD of features
+        href: articles/pseudomsir_rsd_plot.html
+      - text: Boxplot for each sample
+        href: articles/pseudomsir_sample_boxplot.html
+      - text: QC sample correlation plot
+        href: articles/pseudomsir_qc_correlation.html
+      - text: Output HTML quality assessment report
+        href: articles/html_qa_report.html
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: https://twitter.com/xiaotaoshen1990
+    contact:
+      text: Contact us
+      href: articles/contact_us.html
+    news:
+      text: News
+      menu:
+      - text: "Change log"
+        href: news/index.html
+        
+footer:
+  structure: 
+    left: [package, developed_by, from]
+    right: [contact, email, wechat, tidymass]
+  components:
+    from: <br> from <i class="fa fa-university"></i> Stanford University <br> <i class="fa fa-clinic-medical"></i>School of Medicine <br> <i class="fa fa-dna"></i> Genetics Department
+    more_sofware: <br> <i class="fa fa-laptop-code"></i> [More softare](https://www.shenxt.info/files/wechat_QR.jpg)
+    contact: <b>Contact Us:</b> <br>
+    email: <i class="fa fa-envelope"></i> shenxt1990@outlook.com <br>
+    wechat: <i class="fa fa-weixin"></i>  [shenxt1990](https://www.shenxt.info/files/wechat_QR.jpg) <br>
+    tidymass: <i class="fa fa-network-wired"></i> [A R package for deepPseudoMSI](https://www.deeppseudomsi.org/)
+        
+toc:
+  depth: 3

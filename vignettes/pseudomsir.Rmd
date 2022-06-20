@@ -1,0 +1,47 @@
+---
+title: "pseudomsir"
+output: html_document
+date: '2022-06-20'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Install `pseudomsir`
+
+You can install `pseudomsir` from [GitLab](https://gitlab.com/jaspershen/pseudomsir)
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+if(!require(remotes)){
+install.packages("remotes")
+}
+remotes::install_gitlab("jaspershen/pseudomsir")
+```
+
+or [GitHub](https://github.com/deepPseudoMSI-project/pseudomsir)
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+remotes::install_github("deepPseudoMSI-project/pseudomsir")
+```
+
+# Convert mass spectrometry data to pseudoMS image
+
+Please convert your mass spectrometry raw data to mzXML or mzML format first using msconvert or R package [`massconverter`](https://massconverter.tidymass.org/).
+
+Then use the `convert_raw_data2pseudoms_image` function from `pseudomsir` package to convert mzMXL or mzML format to images.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(pseudomsir)
+```
+
+Then put the mzXML data in the `demo_data` folder.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+convert_raw_data2pseudoms_image(file_name = "demo_data/QCP11.mzXML")
+```
+
+And then one image (png) with the same name of mzXML file will be put in the same folder.
+
+![](demo_data/QCP11.png)
+

@@ -15,3 +15,6 @@ logo.txt
 pkgdown/
 demo_data
 ^LICENSE\.md$
+
+vignettes/demo_data
+vignettes/demo_data/

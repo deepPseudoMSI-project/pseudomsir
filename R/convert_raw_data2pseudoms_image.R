@@ -48,9 +48,12 @@ convert_raw_data2pseudoms_image <-
         verbose = TRUE
       )
     
-    file_name <- stringr::str_replace(string = file_name,
-                                      pattern = ".mz[X]{0,1}ML",
-                                      replacement = "")
+    file_name <-
+      file_name %>% 
+      stringr::str_replace(pattern = ".mz[X]{0,1}ML",
+                           replacement = "") %>% 
+      stringr::str_replace(pattern = ".mz[x]{0,1}ml",
+                           replacement = "")
     
     peaks <- ProtGenerics::peaks(object = file1)
     

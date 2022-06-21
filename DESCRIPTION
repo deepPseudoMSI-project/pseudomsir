@@ -1,7 +1,7 @@
 Package: pseudomsir
 Type: Package
 Title: R package for deepPseudoMSI project
-Version: 0.99.1
+Version: 0.99.2
 Date: 2022-06-20
 Authors@R: c(
     person("Xiaotao", "Shen", , "shenxt1990@outlook.com", role = c("aut", "cre"), 

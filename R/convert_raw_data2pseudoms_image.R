@@ -49,9 +49,9 @@ convert_raw_data2pseudoms_image <-
       )
     
     file_name <-
-      file_name %>% 
+      file_name %>%
       stringr::str_replace(pattern = ".mz[X]{0,1}ML",
-                           replacement = "") %>% 
+                           replacement = "") %>%
       stringr::str_replace(pattern = ".mz[x]{0,1}ml",
                            replacement = "")
     

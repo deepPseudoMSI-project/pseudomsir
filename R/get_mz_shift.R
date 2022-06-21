@@ -11,20 +11,22 @@
 #' @export
 
 get_mz_shift <-
-  function(mz = c(87.04406, 90.05499, 94.06512),
+  function(mz = c(87.04406, 90.05499, 94.06512, 400.1234),
            mean = 1.12361,
            sd = 4.076444) {
     error <- rnorm(n = 10000, mean = mean, sd = sd)
     
-    mz <- purrr::map(
-      mz,
-      .f = function(x) {
-        temp_error <- sample(error, 1)
-        y <- x - (ifelse(x < 400, 400, x) * temp_error) / 10 ^ 6
-        y
-      }
-    )
+    temp_error <- sample(error, length(mz), replace = TRUE)
+    mz <-
+      mz - (ifelse(mz < 400, 400, mz) * temp_error) / 10 ^ 6
     
-    unname(unlist(mz))
-    
+    # mz <- purrr::map(
+    #   mz,
+    #   .f = function(x) {
+    #     temp_error <- sample(error, 1)
+    #     y <- x - (ifelse(x < 400, 400, x) * temp_error) / 10 ^ 6
+    #     y
+    #   }
+    # )
+    return(mz)
   }

@@ -1,7 +1,7 @@
 Package: pseudomsir
 Type: Package
 Title: R package for deepPseudoMSI project
-Version: 0.99.2
+Version: 0.99.3
 Date: 2022-06-20
 Authors@R: c(
     person("Xiaotao", "Shen", , "shenxt1990@outlook.com", role = c("aut", "cre"), 
@@ -27,7 +27,9 @@ Imports:
     BiocGenerics,
     BiocParallel,
     stringr,
-    grDevices
+    grDevices,
+    tibble,
+    tidyr
 License: MIT + file LICENSE
 URL: https://github.com/deepPseudoMSI-project/pseudomsir
 RoxygenNote: 7.1.2

@@ -7,11 +7,13 @@
 #' @importFrom ProtGenerics peaks rtime
 #' @importFrom crayon yellow red green bold bgRed
 #' @importFrom dplyr group_by mutate_if sample_n ungroup select
-#' @importFrom dplyr mutate select distinct left_join
+#' @importFrom dplyr mutate select distinct left_join summarise
 #' @importFrom magrittr %>%
 #' @importFrom grDevices png colorRampPalette dev.off
 #' @importFrom graphics image par
 #' @importFrom stats rnorm
+#' @importFrom tibble column_to_rownames
+#' @importFrom tidyr pivot_wider
 #' @export
 #' @return logo
 #' @examples

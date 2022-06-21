@@ -3,7 +3,7 @@ pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   pseudomsir: pseudomsir.html
-last_built: 2022-06-20T20:36Z
+last_built: 2022-06-21T18:12Z
 urls:
   reference: https://pseudomsir.deeppseudomsi.org/reference
   article: https://pseudomsir.deeppseudomsi.org/articles
